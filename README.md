@@ -2,34 +2,34 @@
 
 
 
-# [Project Name] 🎯
+# sense-ish 🎯
 
 
-## Basic Details
-### Team Name: [Name]
+## an website that educates you on old myths people thought was true to make you feel like you are not dumb alone
+### Team Name: myth
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead: Richard MR - [jain university kochi]
+- Member 2: Afrin hatheeja - [jain university kochi]
+  
 
 ### Project Description
-[2-3 lines about what your project does]
+ever felt dumb,just use this website to know you are not alone
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+you feel dumb and you are alone on it
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+provides dumb old myths
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
+- HTML
 - [Frameworks used]
-- [Libraries used]
-- [Tools used]
+- 
+- git hub,
 
 For Hardware:
 - [List main components]
@@ -66,7 +66,7 @@ For Hardware:
 # Schematic & Circuit
 ![Circuit](Add your circuit diagram here)
 *Add caption explaining connections*
-
+https://chatgpt.com/share/6a9ac327-777c-83ee-802f-620a0660b974
 ![Schematic](Add your schematic diagram here)
 *Add caption explaining the schematic*
 
@@ -89,9 +89,8 @@ For Hardware:
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- Richard MR: 
+- Afrin hatheeja: 
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
