@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Feel Dum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --yellow:#FFD23F;
+    --pink:#FF3CAC;
+    --blue:#3F8CFF;
+    --ink:#1A1A1A;
+    --paper:#FFFDF7;
+    --green:#2ECC71;
+  }
+
+  *{box-sizing:border-box;}
+
+  html,body{
+    margin:0;
+    padding:0;
+    min-height:100%;
+  }
+
+  body{
+    background-color:var(--yellow);
+    background-image:
+      radial-gradient(circle, rgba(26,26,26,0.12) 1.6px, transparent 1.6px);
+    background-size: 22px 22px;
+    color:var(--ink);
+    font-family:'Space Grotesk', sans-serif;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    min-height:100vh;
+    padding:32px 16px 24px;
+    overflow-x:hidden;
+  }
+
+  .wrap{
+    width:100%;
+    max-width:640px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    flex:1;
+  }
+
+  header{
+    text-align:center;
+    margin-bottom:28px;
+  }
+
+  h1{
+    font-family:'Bungee', sans-serif;
+    font-weight:400;
+    font-size:clamp(2rem, 8vw, 3.4rem);
+    line-height:1.05;
+    margin:0 0 10px;
+    color:var(--ink);
+    letter-spacing:0.5px;
+    transform:rotate(-1.5deg);
+  }
+
+  h1 span{
+    display:inline-block;
+    background:var(--pink);
+    color:var(--paper);
+    padding:2px 10px;
+    border:3px solid var(--ink);
+    box-shadow:4px 4px 0 var(--ink);
+    transform:rotate(2deg);
+    margin-left:6px;
+  }
+
+  .tagline{
+    font-size:1.05rem;
+    max-width:420px;
+    margin:0 auto;
+    color:#3a2f00;
+  }
+
+  .stage{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:100%;
+    flex:1;
+  }
+
+  .dum-button{
+    font-family:'Bungee', sans-serif;
+    font-size:clamp(1.3rem, 5vw, 1.9rem);
+    color:var(--paper);
+    background:var(--pink);
+    border:4px solid var(--ink);
+    padding:22px 40px;
+    border-radius:14px;
+    cursor:pointer;
+    box-shadow:8px 8px 0 var(--ink);
+    transition:transform 0.08s ease, box-shadow 0.08s ease;
+    user-select:none;
+    touch-action:manipulation;
+  }
+
+  .dum-button:hover{
+    background:#ff5cc0;
+  }
+
+  .dum-button:active,
+  .dum-button.pressed{
+    transform:translate(6px,6px);
+    box-shadow:2px 2px 0 var(--ink);
+  }
+
+  @keyframes shake{
+    0%{transform:translate(0,0) rotate(0);}
+    20%{transform:translate(-4px,2px) rotate(-2deg);}
+    40%{transform:translate(4px,-2px) rotate(2deg);}
+    60%{transform:translate(-3px,1px) rotate(-1deg);}
+    80%{transform:translate(3px,-1px) rotate(1deg);}
+    100%{transform:translate(0,0) rotate(0);}
+  }
+  .shake{
+    animation:shake 0.35s ease;
+  }
+
+  .card-slot{
+    margin-top:34px;
+    width:100%;
+    min-height:210px;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+  }
+
+  .card{
+    background:var(--paper);
+    border:3px solid var(--ink);
+    border-radius:4px;
+    padding:26px 26px 20px;
+    width:100%;
+    max-width:480px;
+    box-shadow:7px 7px 0 var(--blue);
+    transform:rotate(-1deg);
+    opacity:0;
+    position:relative;
+  }
+
+  .card::before{
+    content:"";
+    position:absolute;
+    top:-14px;
+    left:50%;
+    transform:translateX(-50%) rotate(-6deg);
+    width:60px;
+    height:26px;
+    background:rgba(63,140,255,0.55);
+    border:1px solid rgba(26,26,26,0.25);
+  }
+
+  @keyframes pop-in{
+    0%{opacity:0; transform:rotate(-1deg) translateY(16px) scale(0.96);}
+    60%{opacity:1; transform:rotate(-1deg) translateY(-3px) scale(1.02);}
+    100%{opacity:1; transform:rotate(-1deg) translateY(0) scale(1);}
+  }
+  .card.show{
+    animation:pop-in 0.42s cubic-bezier(.34,1.56,.64,1) forwards;
+  }
+
+  .card-label{
+    font-size:0.78rem;
+    color:#6b6b6b;
+    margin:0 0 10px;
+  }
+
+  .myth-text{
+    font-size:1.18rem;
+    line-height:1.5;
+    margin:0;
+    color:var(--ink);
+  }
+
+  .empty-hint{
+    text-align:center;
+    color:#6b5a00;
+    font-size:0.95rem;
+    max-width:300px;
+    margin-top:6px;
+    opacity:0.85;
+  }
+
+  .counter{
+    margin-top:22px;
+    font-size:0.95rem;
+    color:#3a2f00;
+    background:var(--paper);
+    border:2px solid var(--ink);
+    padding:6px 14px;
+    border-radius:999px;
+  }
+
+  .counter strong{
+    color:var(--pink);
+  }
+
+  footer{
+    margin-top:44px;
+    text-align:center;
+  }
+
+  .credit{
+    display:inline-block;
+    font-size:0.85rem;
+    background:var(--green);
+    color:var(--ink);
+    border:2.5px solid var(--ink);
+    padding:8px 16px;
+    border-radius:8px;
+    transform:rotate(1.2deg);
+    box-shadow:4px 4px 0 var(--ink);
+  }
+
+  @media (max-width:420px){
+    .dum-button{padding:18px 28px;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .shake, .card.show{animation:none;}
+    .card{opacity:1;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <h1>THINGS HUMANS<br>USED TO<span>BELIEVE</span></h1>
+    <p class="tagline">Tap the button. Absorb some historical nonsense. Feel dumber in the best way. Repeat forever.</p>
+  </header>
+
+  <div class="stage">
+    <button class="dum-button" id="dumBtn">I FEEL DUM 🫠</button>
+
+    <div class="card-slot">
+      <div id="card" class="card">
+        <p class="card-label">humanity, apparently</p>
+        <p class="myth-text" id="mythText">Tap the button to summon your first myth.</p>
+      </div>
+    </div>
+
+    <div class="counter">myths absorbed: <strong id="count">0</strong></div>
+  </div>
+
+  <footer>
+    <span class="credit">built with dumb love by You &amp; Afrin</span>
+  </footer>
+</div>
+
+<script>
+  const myths = [
+    "Napoleon was unusually short — he was actually average height for a Frenchman of his era.",
+    "Vikings wore horned helmets into battle. (No archaeological evidence for this — ever.)",
+    "Bulls charge at the color red. They're colorblind to it — it's the waving cape that sets them off.",
+    "Humans only use 10% of their brains.",
+    "Goldfish have a three-second memory.",
+    "You lose most of your body heat through your head.",
+    "Sugar makes kids hyperactive.",
+    "Cracking your knuckles causes arthritis.",
+    "Swallowed gum stays in your stomach for seven years.",
+    "Shaving makes hair grow back thicker and darker.",
+    "Reading in dim light permanently ruins your eyesight.",
+    "Going outside with wet hair gives you a cold.",
+    "The Great Wall of China is visible from space with the naked eye.",
+    "Einstein failed math in school.",
+    "The tongue has distinct zones for sweet, sour, salty, and bitter.",
+    "Bats are completely blind.",
+    "Ostriches bury their heads in the sand when scared.",
+    "Lightning never strikes the same place twice.",
+    "You must wait 30 minutes after eating before swimming, or you'll cramp and drown.",
+    "Poinsettia plants are deadly poisonous to touch.",
+    "Coffee stunts a child's growth.",
+    "Eating carrots gives you night-vision-level eyesight.",
+    "Medieval people believed the Earth was flat before Columbus proved otherwise.",
+    "Touching a toad gives you warts.",
+    "You should feed a cold and starve a fever.",
+    "Hair and nails keep growing after a person dies.",
+    "Touching a baby bird makes its mother abandon it.",
+    "Left-handed people were once thought to be marked by the devil.",
+    "'Fan death': sleeping with an electric fan on in a closed room can kill you — still believed by many today.",
+    "Europeans once believed tomatoes were poisonous and refused to eat them.",
+    "Ancient Romans supposedly had 'vomitoriums' where they purged food to keep feasting.",
+    "Rubbing butter on a burn helps it heal.",
+    "Standing too close to the TV will ruin your eyes.",
+    "Spinach is exceptionally high in iron — thanks to a decimal-point error that stuck for decades.",
+    "Medieval doctors performed bloodletting to balance the body's four 'humors.'",
+    "'Trepanning' — drilling a hole in the skull — was used to release evil spirits or cure headaches.",
+    "Mercury was sold as a cure-all health tonic well into the 1900s.",
+    "Radium was marketed as a health booster and added to water, toothpaste, and cosmetics.",
+    "Heroin was originally marketed by a major pharmaceutical company as a safe, non-addictive cough remedy.",
+    "Early Coca-Cola contained actual cocaine, marketed as a refreshing tonic.",
+    "Shoe stores installed X-ray machines so customers could 'see' how well shoes fit their feet.",
+    "Asbestos was sold as a 'magic mineral,' safe enough to use as fake snow and even in beauty products.",
+    "Lead was added to paint and gasoline for decades and considered perfectly safe.",
+    "Doctors once appeared in ads recommending cigarettes to soothe the throat and calm nerves.",
+    "Corsets were believed necessary to keep a woman's internal organs 'in place.'",
+    "Masturbation was widely claimed to cause blindness, insanity, or hairy palms.",
+    "A 'sin eater' could absorb a dead person's sins by eating a meal set on their corpse.",
+    "Comets and eclipses were seen as omens predicting disaster or the death of kings.",
+    "Ancient physicians believed 'hysteria' in women was caused by a womb wandering around the body.",
+    "Garlic and silver were believed to ward off vampires and werewolves.",
+    "Rubbing a cut potato on a wart was believed to cure it.",
+    "Carrying a rabbit's foot was believed to bring good luck.",
+    "Throwing salt over your left shoulder was believed to blind the devil watching you.",
+    "Opening an umbrella indoors was believed to summon bad luck.",
+    "Breaking a mirror was believed to curse you with seven years of bad luck.",
+    "Walking under a ladder was believed to invite misfortune.",
+    "Sailors believed having a woman aboard a ship would anger the sea and cause a wreck.",
+    "Redheaded people were once believed to be witches or descendants of Judas.",
+    "It was believed that hand-washing before surgery was pointless — until one doctor proved otherwise and was mocked for it.",
+    "For centuries, the heart — not the brain — was believed to be the seat of thought and emotion.",
+    "Ancient Egyptians believed the brain was useless and scooped it out during mummification.",
+    "Medieval Europeans believed mice could spontaneously generate from piles of dirty rags and grain.",
+    "It was official doctrine for centuries that the Sun revolved around the Earth.",
+    "Some ancient sailors believed the ocean ended in a massive waterfall at the edge of a flat world.",
+    "It was widely believed that a swallowed watermelon seed would grow into a watermelon inside your stomach.",
+    "People believed cutting your hair according to the moon's phase changed how it grew back.",
+    "Wearing a copper bracelet was believed to cure arthritis.",
+    "Victorian doctors believed tight corset-lacing prevented 'female hysteria.'",
+    "Medieval people avoided bathing, believing it opened the pores and let disease in.",
+    "It was widely believed that cats would suck the breath out of a sleeping baby.",
+    "Sailors got specific tattoos, like a compass or swallow, believing the ink itself would prevent drowning.",
+    "People once believed swallowing a live spider could cure intestinal worms.",
+    "Farmers believed hanging a horseshoe with the ends pointing up would 'hold in' good luck.",
+    "'Phrenology' claimed the bumps and shape of your skull revealed your intelligence and character.",
+    "Doctors once deliberately gave patients malaria, believing the resulting fever could cure mental illness — and won a Nobel Prize for it.",
+    "Lobotomies were widely promoted as a safe, effective cure for anxiety and depression.",
+    "Wealthy ancient Romans reportedly ate flamingo tongues, believing they granted wisdom and status.",
+    "A 'mad stone' — a calcified lump from a deer's stomach — was believed to cure rabies if pressed to a bite wound.",
+    "Sailors painted eyes on the bows of their ships, believing it helped the vessel 'see' its way and avoid danger.",
+    "A black cat crossing your path was believed to bring misfortune.",
+    "Some farmers believed a rooster's crow was what caused the sun to rise each morning.",
+    "Eating chocolate was long blamed for causing acne, with little real evidence behind it.",
+    "Medieval alchemists believed the 'philosopher's stone' could transform ordinary lead into gold.",
+    "Swallowing a live goldfish was a harmless party trick and popular college fad in the 1930s.",
+    "It was believed wearing an amethyst could prevent a person from getting drunk.",
+    "Doctors once prescribed heavy metal 'tonics' containing arsenic to improve a woman's complexion.",
+    "It was believed that eating crusts of bread would make your hair curly.",
+    "People once believed that thunder was the sound of angels bowling in the clouds.",
+    "It was thought that placing a knife under the bed during childbirth would 'cut' the pain.",
+    "Sailors believed whistling on a ship could summon a storm.",
+    "It was believed that owls were a bad omen, and hearing one hoot near your home foretold a death.",
+    "People once thought freckles could be removed by washing your face in morning dew on May Day.",
+    "It was believed babies born with a caul (a piece of membrane) over their face were protected from drowning for life.",
+    "Doctors in the 1800s prescribed cocaine drops for teething babies to soothe their gums.",
+    "It was believed that a person's handwriting could reveal deep truths about their hidden character.",
+    "Sailors believed tattoos of a pig and a rooster on their feet would keep them from drowning.",
+    "It was believed that eating fish makes you smarter because fish is 'brain food' — the science behind it is much weaker than the saying suggests.",
+    "Ancient Greeks believed the number of a person's teeth differed between men and women — Aristotle wrote this despite having a wife to count.",
+    "People once believed wearing red during a solar eclipse would protect an unborn child from birth defects.",
+    "It was widely believed a compass would point strangely near a graveyard because of restless spirits.",
+    "Farmers once believed toads falling from the sky during storms had literally rained down from the clouds.",
+    "It was believed you could cure a stye on your eye by rubbing it with a gold wedding ring.",
+    "Doctors once believed that reading too many novels could cause 'brain fever' in young women."
+  ];
+
+  const btn = document.getElementById('dumBtn');
+  const card = document.getElementById('card');
+  const mythText = document.getElementById('mythText');
+  const countEl = document.getElementById('count');
+
+  let lastIndex = -1;
+  let count = 0;
+
+  function pickMyth(){
+    let idx = Math.floor(Math.random() * myths.length);
+    if(myths.length > 1){
+      while(idx === lastIndex){
+        idx = Math.floor(Math.random() * myths.length);
+      }
+    }
+    lastIndex = idx;
+    return myths[idx];
+  }
+
+  btn.addEventListener('click', () => {
+    mythText.textContent = pickMyth();
+    count += 1;
+    countEl.textContent = count;
+
+    card.classList.remove('show');
+    void card.offsetWidth;
+    card.classList.add('show');
+
+    btn.classList.remove('shake');
+    void btn.offsetWidth;
+    btn.classList.add('shake');
+  });
+</script>
+
+</body>
+</html>
