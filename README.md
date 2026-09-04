@@ -15,34 +15,25 @@
   
 
 ### Project Description
-ever felt dumb,just use this website to know you are not alone
+ever felt dumb? just use this website to know you're not alone !!!
 
 ### The Problem (that doesn't exist)
 you feel dumb and you are alone on it
 
 ### The Solution (that nobody asked for)
-provides dumb old myths
+provides dumb old myths.
 
 ## Technical Details
 ### Technologies/Components Used
-For Software:
-- HTML
-- [Frameworks used]
-- 
+Software:
+- HTML 
 - git hub,
 
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
-
-### Implementation
-For Software:
 # Installation
-[commands]
+use link or type in website name
 
 # Run
-[commands]
+
 
 ### Project Documentation
 For Software:
@@ -60,15 +51,6 @@ For Software:
 # Diagrams
 ![Workflow](Add your workflow/architecture diagram here)
 *Add caption explaining your workflow*
-
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-https://chatgpt.com/share/6a9ac327-777c-83ee-802f-620a0660b974
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
 
 # Build Photos
 ![Components](Add photo of your components here)
