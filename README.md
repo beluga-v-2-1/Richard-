@@ -1,5 +1,5 @@
 I Feel Dum 🫠
-Team Members
+Team Members:
 Team Lead: Richard MR — [Jain University, Kochi]
 Member 2: Afrin Hatheeja — [Jain University, Kochi]
 Project Description
