@@ -1,55 +1,97 @@
-I Feel Dum 🫠
-Team Members:
-Team Lead: Richard MR — [Jain University, Kochi]
-Member 2: Afrin Hatheeja — [Jain University, Kochi]
-Project Description
+<img width="1280" height="640" alt="git (1)" src="https://github.com/user-attachments/assets/8920b256-2ba8-4988-b824-5351134eb4bd" />
 
-We built a website whose entire purpose is to make you feel a little dumber, on purpose. There's one button. You press it, and it hands you a real, historically documented myth or superstition that actual humans genuinely believed and organized their lives around — with an optional "why though?" dropdown that explains what they got wrong and why.
 
-The Problem (that doesn't exist)
+MYTH
+https://richard-red.vercel.app/
 
-Nobody was struggling to find historical trivia. Wikipedia exists. Nobody asked for a website that exists purely to remind you that humanity used to think tomatoes were poisonous and vikings had horns on their helmets. And yet.
+### Team Members
+- Team Lead: Richard MR - [JAIN UNIVERSITY]
+- Member 2: Afrin Hatheeja - [JAIN UNIVERSITY]
 
-The Solution (that nobody asked for)
+### Project Description
+So 
 
-One button. One hundred myths. Infinite dumb feelings. Click it, get roasted by history, optionally learn something, click it again.
+### The Problem 
+We make dumb moments you've had or experienced go away. 
 
-Technical Details
-Technologies/Components Used
+### The Solution (that nobody asked for)
+when you a dum moment , imii
 
-Software:
+## Technical Details
+### Technologies/Components Used
+For Software:
+- [Languages used]
+- [Frameworks used]
+- [Libraries used]
+- [Tools used]
 
-HTML5
-CSS3
-JavaScript (vanilla, no frameworks)
-Google Fonts (Bungee, Space Grotesk)
+For Hardware:
+- [List main components]
+- [List specifications]
+- [List tools required]
 
-Hardware:
+### Implementation
+For Software:
+# Installation
+[commands]
 
-A laptop. That's it.
-How It Works
-User loads the page and clicks the "I FEEL DUM" button.
-A JavaScript function randomly selects one myth from a built-in list of 100+ entries (never repeating the previous one back-to-back).
-The chosen myth is displayed on an animated card, along with a hidden "why though?" dropdown containing the real explanation.
-A counter tracks how many myths the user has absorbed in the session.
-A "Credits" link opens a separate page with project and team info.
+# Run
+[commands]
 
-No backend, no server, no API calls, no LLM. Everything runs entirely in the browser.
+### Project Documentation
+For Software:
 
-Installation
+# Screenshots (Add at least 3)
+![Screenshot1](Add screenshot 1 here with proper name)
+*Add caption explaining what this shows*
 
-No installation needed. Either:
+![Screenshot2](Add screenshot 2 here with proper name)
+*Add caption explaining what this shows*
 
-Open dumb-myths.html directly in any web browser, or
-Host the two files (dumb-myths.html and credits.html) together on any static hosting service (GitHub Pages, Netlify, Vercel).
-Run
+![Screenshot3](Add screenshot 3 here with proper name)
+*Add caption explaining what this shows*
 
-Just open the file or visit the hosted link — there's no server to start and no dependencies to install.
+# Diagrams
+![Workflow](Add your workflow/architecture diagram here)
+*Add caption explaining your workflow*
 
-Project Documentation
-Screenshots (Add at least 3)
-<img width="1136" height="930" alt="image" src="https://github.com/user-attachments/assets/cd662e13-c687-4f82-9119-3f889e8ad136" />
+For Hardware:
 
-<img width="1136" height="930" alt="image" src="https://github.com/user-attachments/assets/4a100f03-c521-4ef0-9c41-66cdfba2ff2f" />
+# Schematic & Circuit
+![Circuit](Add your circuit diagram here)
+*Add caption explaining connections*
 
-<img width="1542" height="930" alt="image" src="https://github.com/user-attachments/assets/c515dc92-5d3b-4055-a4fb-398f19ebb1a0" />
+![Schematic](Add your schematic diagram here)
+*Add caption explaining the schematic*
+
+# Build Photos
+![Components](Add photo of your components here)
+*List out all components shown*
+
+![Build](Add photos of build process here)
+*Explain the build steps*
+
+![Final](Add photo of final product here)
+*Explain the final build*
+
+### Project Demo
+# Video
+[Add your demo video link here]
+*Explain what the video demonstrates*
+
+# Additional Demos
+[Add any extra demo materials/links]
+
+## Team Contributions
+- [Name 1]: [Specific contributions]
+- [Name 2]: [Specific contributions]
+- [Name 3]: [Specific contributions]
+
+---
+Made with ❤️ at TinkerHub Useless Projects 
+
+![Static Badge](https://img.shields.io/badge/TinkerHub-24?color=%23000000&link=https%3A%2F%2Fwww.tinkerhub.org%2F)
+![Static Badge](https://img.shields.io/badge/UselessProjects--26-26?link=https%3A%2F%2Ftinkerhub.org%2Fevents%2F1M8ORET9A1%2Fuseless-projects-3.0)
+
+
+
