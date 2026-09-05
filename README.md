@@ -39,14 +39,14 @@ use link or type in website name
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/dd69f81e-be27-45fb-8a9a-edb77437bba1" />
+screenshot of the ollama in ascii version 
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+<img width="1850" height="155" alt="image" src="https://github.com/user-attachments/assets/d086c0fe-9647-4674-9d74-9725f879c7a0" />
+screenshot of ollama in action 
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6a0db56f-06de-4f11-a135-78cd28dc1e28" />
+this is a preview of AI
 
 # Diagrams
 ![Workflow](Add your workflow/architecture diagram here)
