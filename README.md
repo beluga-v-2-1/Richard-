@@ -1,3 +1,106 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <img width="1280" height="640" alt="git (1)" src="https://github.com/user-attachments/assets/8920b256-2ba8-4988-b824-5351134eb4bd" />
 
 
@@ -5,29 +108,36 @@
 # sense-ish 🎯
 
 
-## an website that educates you on old myths people thought was true to make you feel like you are not dumb alone
-### Team Name: myth
-
-
-### Team Members
+### Tear Members
 - Team Lead: Richard MR - [jain university kochi]
 - Member 2: Afrin hatheeja - [jain university kochi]
   
 
 ### Project Description
-ever felt dumb? just use this website to know you're not alone !!!
+we set up a powerful local LLM inside EC2 VM.you can ask it anything like regular chatbox .But instead of giving answer in english ,our project betrays you and gives ASCLL values
 
 ### The Problem (that doesn't exist)
-you feel dumb and you are alone on it
+people can read english easily .where is the challenge?where is the mystery?!!
 
 ### The Solution (that nobody asked for)
-provides dumb old myths.
+we hosted a local LLM on AWS VM.when the user gives intput ,LLM generates a perfect answer ,then our code instantly coverts it into ASCll
 
 ## Technical Details
 ### Technologies/Components Used
 Software:
-- HTML 
-- git hub,
+- python
+- fast  API
+- request
+- git hub
+
+hardware:
+-laptop and AWS VM
+
+how it works:
+-user sends prompt to APL hosted on AWS VM
+-VM  runs local LLM offline and gets response
+-python function ord()converts response string to list of ASCll integers
+-returns both original and ASCll version _but ASCll is the main output
 
 # Installation
 use link or type in website name
@@ -48,27 +158,6 @@ screenshot of ollama in action
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6a0db56f-06de-4f11-a135-78cd28dc1e28" />
 this is a preview of AI
 
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
-
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
-
-### Project Demo
-# Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
-
-# Additional Demos
-[Add any extra demo materials/links]
 
 ## Team Contributions
 - Richard MR: 
